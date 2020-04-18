@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.handgesterrecognition.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+            app:destination="@id/nav_home_second" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_captuer"
+            app:destination="@id/nav_capture" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_parameter"
+            app:destination="@id/nav_parameter" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_predict"
+            app:destination="@id/nav_predict" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_home_second"
+        android:name="com.example.handgesterrecognition.ui.home.HomeSecondFragment"
+        android:label="@string/home_second"
+        tools:layout="@layout/fragment_home_second">
+        <action
+            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
+            app:destination="@id/nav_home" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/nav_parameter"
+        android:name="com.example.handgesterrecognition.ui.parameter.ParameterFragment"
+        android:label="@string/menu_parameter"
+        tools:layout="@layout/fragment_parameter" >
+        <action
+            android:id="@+id/action_nav_parameter_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_capture"
+        android:name="com.example.handgesterrecognition.ui.Capture.CaptureFragment"
+        android:label="@string/menu_capture"
+        tools:layout="@layout/fragment_capture" >
+        <action
+            android:id="@+id/action_nav_captuer_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_predict"
+        android:name="com.example.handgesterrecognition.ui.Predict.PredictFragment"
+        android:label="@string/menu_predict"
+        tools:layout="@layout/fragment_predict" >
+        <action
+            android:id="@+id/action_nav_predict_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+</navigation>

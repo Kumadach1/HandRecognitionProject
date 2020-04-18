@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">HandgesterRecognition</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">HandGestureRegcognitionApplication</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_parameter">Parameters Setting</string>
+    <string name="menu_capture">Capture Image</string>
+    <string name="menu_predict">Predict Image Class</string>
+
+    <string name="home_second">Home Second</string>
+
+    <string name="RPSG">Rock - Paper - Scissors - Game</string>
+    <string name="Play">play!</string>
+
+    <string name="chooser_title">open with</string>
+
+    //Parameters Setting
+    <string name="s1">Selecting Type of Extracted Features</string>
+    <string name="Select_feature">SELECT FEATURES</string>
+    <string name="s2">Setting Parameters for feature Extraction</string>
+    <string name="Parameters_setting">PARAMETERS SETTING</string>
+    <string name="s3">Setting Parameters for Image Preprocessing Process</string>
+    <string name="Preprocessing_setting">PREPROCESSING SETTING</string>
+    <string name="s4">Setting Parameters for Image Classifier</string>
+    <string name="Classcifier_parameter">CLASSCIFIER PARAMETER SETTING</string>
+
+    //Predict Image Class
+    <string name="Summary_information">Summary information :</string>
+    <string name="Selection_feature">Selection feature :</string>
+    <string name="Parameters_setting_PreImg_FD">Parameters setting for Fourier Descriptor :</string>
+    <string name="Parameters_setting_PreImg_C">Parameters setting for Classifier :</string>
+    <string name="predict_botton">PREDICT CLASS</string>
+
+    //Predict Image Class - Result page
+    <string name="Prediction_result">Prediction results</string>
+    <string name="Input_image">Input Image</string>
+    <string name="Class_name">Class :</string>
+    <string name="Feature">FEATURE EXTRCTION RESULUTS</string>
+    <string name="Class_prediction_re">CLASS PREDICTION RESULT</string>
+
+    //Predict Image Class - Display feature Extraction
+    <string name="Display">DISPLAY</string>
+    <string name="Image_Threshold">Image Thresholding</string>
+    <string name="noise">Noise Removal</string>
+    <string name="Contour">Contour Extraction</string>
+
+    //Predict Image Class - Details
+
+    //Predict Image Class - infoNotComplete
+    <string name="error">Error!</string>
+    <string name="go_back">Go Back</string>
+
+</resources>

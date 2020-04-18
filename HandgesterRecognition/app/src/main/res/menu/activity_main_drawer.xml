@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/icon_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_parameter"
+            android:icon="@drawable/icon_parameter"
+            android:title="@string/menu_parameter" />
+        <item
+            android:id="@+id/nav_capture"
+            android:icon="@drawable/icon_camera"
+            android:title="@string/menu_capture" />
+        <item
+            android:id="@+id/nav_predict"
+            android:icon="@drawable/icon_predict"
+            android:title="@string/menu_predict" />
+    </group>
+</menu>
