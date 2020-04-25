@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+
     }
 
     @SuppressWarnings("StatementWithEmptyBody")

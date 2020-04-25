@@ -7,6 +7,8 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
+import android.media.MediaScannerConnection;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -31,6 +33,10 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.lang.Object.*;
 
 public class CaptureFragment extends Fragment {
 
@@ -89,7 +95,11 @@ public class CaptureFragment extends Fragment {
                 Bitmap bmp = (Bitmap) bd.get("data");
                 imvOutput.setImageBitmap(bmp);
                 imvOutput.setBackgroundColor(Color.parseColor("#80FFFFFF"));
-                storeImageToExternal();
+                try {
+                    storeImageToExternal();
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
@@ -110,19 +120,25 @@ public class CaptureFragment extends Fragment {
         }
     }
 
-    private void storeImageToExternal(){
+    private void storeImageToExternal() throws FileNotFoundException {
 
         //Store image into external storage
         BitmapDrawable drawable = (BitmapDrawable) imvOutput.getDrawable();
         Bitmap bitmap = drawable.getBitmap();
 
+        try{
         File filepath = Environment.getExternalStorageDirectory();
         File dir = new File(filepath.getAbsolutePath()+"/Demo");
         if (!dir.exists()){
             dir.mkdir();
         }
+        //Create an image file name
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US);
+        Date now = new Date();
+        String fileName = formatter.format(now) + ".jpg" ;
         //File file = new File(dir,System.currentTimeMillis()+".jpg");
-        File file = new File(dir,"test_image.jpg");
+        File fileDir = new File(dir,fileName);
+        /**
         try{
             outputStream = new FileOutputStream(file);
         }catch (FileNotFoundException e){
@@ -140,5 +156,22 @@ public class CaptureFragment extends Fragment {
         }catch (IOException e){
             e.printStackTrace();
         }
+    **/
+
+        //Write into the image file by the Bitmap content
+        outputStream = new FileOutputStream(fileDir);
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, outputStream);
+
+        MediaScannerConnection.scanFile(this.getContext(),
+                new String[]{fileDir.toString()}, null,
+                new MediaScannerConnection.OnScanCompletedListener() {
+                    @Override
+                    public void onScanCompleted(String path, Uri uri) {
+                    }
+                });
+
+    }catch(Exception e){
+        e.printStackTrace();
+    }
     }
 }
