@@ -10,7 +10,7 @@
             android:title="@string/menu_home" />
         <item
             android:id="@+id/nav_parameter"
-            android:icon="@drawable/icon_parameter"
+            android:icon="@drawable/icon_compare"
             android:title="@string/compareTitle" />
         <item
             android:id="@+id/nav_capture"

@@ -33,10 +33,13 @@
     <string name="Classcifier_parameter">CLASSCIFIER PARAMETER SETTING</string>
 
     //Predict Image Class
-    <string name="Summary_information"><b> Summary information</b></string>
-    <string name="Selection_feature"><u>Selection feature :</u></string>
-    <string name="Parameters_setting_PreImg_FD"><u>Parameters setting for Fourier Descriptor :</u></string>
-    <string name="Parameters_setting_PreImg_C"><u>Parameters setting for Classifier :</u></string>
+    <string name="Summary_information"><b>Predict image class information</b></string>
+    <string name="Selection_feature"><u>Pre-Processing result :</u></string>
+    <string name="SF_ans">display a pre-processing input image(from the selected picture)</string>
+    <string name="Parameters_setting_PreImg_FD"><u>Feature Extraction result :</u></string>
+    <string name="FE_ans">the tool for get the histogram of picture</string>
+    <string name="Parameters_setting_PreImg_C"><u>Class Prediction result :</u></string>
+    <string name="CP_ans">display a pre-processing input image(from the selected picture)</string>
     <string name="predict_botton">PREDICT CLASS</string>
     <string name="none">-> NONE</string>
 
