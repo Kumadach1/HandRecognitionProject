@@ -42,9 +42,9 @@
 
     <fragment
         android:id="@+id/nav_parameter"
-        android:name="com.example.handgesterrecognition.ui.parameter.ParameterFragment"
-        android:label="@string/menu_parameter"
-        tools:layout="@layout/fragment_parameter" >
+        android:name="com.example.handgesterrecognition.ui.compare.compareFragment"
+        android:label="@string/compareTitle"
+        tools:layout="@layout/fragment_compair" >
         <action
             android:id="@+id/action_nav_parameter_to_nav_home"
             app:destination="@id/nav_home" />

@@ -1,19 +1,13 @@
 package com.example.handgesterrecognition;
 
-import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.example.handgesterrecognition.ui.Capture.CaptureFragment;
 import com.example.handgesterrecognition.ui.Predict.PredictFragment;
-import com.example.handgesterrecognition.ui.parameter.ParameterFragment;
+import com.example.handgesterrecognition.ui.compare.compareFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -77,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         switch (item.getItemId()) {
             case R.id.nav_parameter:
-                fm = new ParameterFragment();
+                fm = new compareFragment();
                 strTitle = "Parameters Setting";
                 break;
 

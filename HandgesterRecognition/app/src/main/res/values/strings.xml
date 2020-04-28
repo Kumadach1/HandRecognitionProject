@@ -21,7 +21,8 @@
 
     <string name="chooser_title">open with</string>
 
-    //Parameters Setting
+    //compare page
+    <string name="compareTitle">Compare image</string>
     <string name="s1">Selecting Type of Extracted Features</string>
     <string name="Select_feature">SELECT FEATURES</string>
     <string name="s2">Setting Parameters for feature Extraction</string>
@@ -42,10 +43,20 @@
     //Predict Image Class - Result page
     <string name="select_picture">Select Picture</string>
     <string name="Prediction_result">Prediction results</string>
+    <string name="preprocess">Pre-processing result</string>
     <string name="Input_image">Input Image</string>
     <string name="Class_name">Class :</string>
     <string name="Feature">FEATURE EXTRCTION RESULUTS</string>
     <string name="Class_prediction_re">CLASS PREDICTION RESULT</string>
+
+    //Predict Image Class - Feature Extraction Result page
+    <string name="f_page">Feature Extraction</string>
+    <string name="load">Load a picture</string>
+    <string name="histogram">Color histogram</string>
+    <string name="GrayHistogram">Gray histogram</string>
+    <string name="brisk">BRISK</string>
+    <string name="orb">ORB</string>
+    <string name="show">SHOW</string>
 
     //Predict Image Class - Display feature Extraction
     <string name="Display">DISPLAY</string>

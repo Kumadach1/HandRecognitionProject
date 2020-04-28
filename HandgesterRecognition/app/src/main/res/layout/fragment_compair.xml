@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.compare.compareFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_gallery1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="LOAD FIRST PICTURE"
+                    android:textSize="12dp" />
+
+                <Button
+                    android:id="@+id/btn_gallery2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/btn_gallery1"
+                    android:text="LOAD SECOND PICTURE"
+                    android:textSize="12dp" />
+
+                <Button
+                    android:id="@+id/btn_histogram_rgb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="50dp"
+                    android:text="H.RGB"
+                    android:textSize="12dp" />
+
+                <Button
+                    android:id="@+id/btn_histogram_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_toRightOf="@id/btn_histogram_rgb"
+                    android:text="H.GRAY"
+                    android:textSize="12dp" />
+
+                <Button
+                    android:id="@+id/btn_brisk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_toRightOf="@id/btn_histogram_gray"
+                    android:text="BRISK"
+                    android:textSize="12dp" />
+
+                <Button
+                    android:id="@+id/btn_orb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_toRightOf="@id/btn_brisk"
+                    android:text="ORB"
+                    android:textSize="12dp" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imv_gallery1"
+                    android:layout_width="160dp"
+                    android:layout_height="270dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/cap" />
+
+                <ImageView
+                    android:id="@+id/imv_gallery2"
+                    android:layout_width="160dp"
+                    android:layout_height="270dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/imv_gallery1"
+                    app:srcCompat="@drawable/cap" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_title_feature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Title_feature_descripe" />
+
+            <ImageView
+                android:id="@+id/imv_feature_image"
+                android:layout_width="match_parent"
+                android:layout_height="247dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPurple"
+                android:visibility="visible"
+                app:srcCompat="@drawable/cap" />
+
+            <ImageView
+                android:id="@+id/imv_feature_image2"
+                android:layout_width="match_parent"
+                android:layout_height="247dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPurple"
+                android:visibility="visible"
+                app:srcCompat="@drawable/cap" />
+
+            <TextView
+                android:id="@+id/tv_feature_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Feature Description" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

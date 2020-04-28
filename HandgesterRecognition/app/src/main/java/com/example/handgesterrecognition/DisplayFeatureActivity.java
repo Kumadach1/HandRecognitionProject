@@ -56,6 +56,7 @@ public class DisplayFeatureActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_feature);
+        setTitle(R.string.menu_predict);
 
         //get the bitmap from predictShowActivity
         Intent intent = getIntent();
