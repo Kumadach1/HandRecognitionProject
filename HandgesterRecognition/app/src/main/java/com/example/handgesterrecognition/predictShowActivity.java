@@ -40,8 +40,9 @@ import java.io.InputStream;
 //prediction result 1st page
 public class predictShowActivity extends AppCompatActivity {
 
+    //code for load a picture from gallery
     private final int LOADING_RESULT_CODE = 100;
-    Button btn_load,btn_displayF,btn_featureResult;
+    Button btn_load,btn_displayF,btn_featureResult,btn_predict;
     Bitmap bitmap = null;
     ImageView imv; // show load picture
     private Uri mImgeFileUri;
@@ -52,32 +53,41 @@ public class predictShowActivity extends AppCompatActivity {
         setTitle(R.string.menu_predict);
         setContentView(R.layout.activity_predict_show);
 
+        //find a button by finding its ID in xml File
         btn_load = findViewById(R.id.button9);
         btn_displayF = findViewById(R.id.button7);
         btn_featureResult = findViewById(R.id.button15);
+        btn_predict = findViewById(R.id.button8);
         imv = findViewById(R.id.imageView5);
 
+        //method activate after click a button from btn_load
         btn_load.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                //start intent to select picture from gallery
+                //make a intent variable to select picture from gallery
                 Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                //call a method to start gallery
                 startActivityForResult(intent, LOADING_RESULT_CODE);
             }
         });
 
+        //method activate after click a button from btn_displayF
         btn_displayF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 //check that picture is selected, ready to send to another Activity
                 if(bitmap != null) {
+                    //make a intent variable to redirect to Displayfeature page
                     Intent intent = new Intent(predictShowActivity.this, DisplayFeatureActivity.class);
+                    //make a intent for passing a bitmap to Displayfeature page
                     intent.putExtra("BitmapImage", bitmap);
+                    //call a method to start intent
                     startActivity(intent);
 
                 }else{
+                    //toast massage when picture is not already picked
                     Toast.makeText(getApplicationContext(),"Please select picture", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -87,12 +97,31 @@ public class predictShowActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                //always pass to another activity
+                //always pass to another activity because in the next page can load a picture
                 if(true) {
+                    //make a intent variable to redirect to featureExtraction page
                     Intent intent = new Intent(predictShowActivity.this, featureExtractionActivity.class);
                     startActivity(intent);
 
                 }else{
+
+                    Toast.makeText(getApplicationContext(),"Please select picture", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        btn_predict.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //always pass to another activity because in the next page can load a picture
+                if(true) {
+                    //make a intent variable to redirect to featureExtraction page
+                    Intent intent = new Intent(predictShowActivity.this, PredictionActivity.class);
+                    startActivity(intent);
+
+                }else{
+
                     Toast.makeText(getApplicationContext(),"Please select picture", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -100,6 +129,7 @@ public class predictShowActivity extends AppCompatActivity {
 
     }
 
+    //onActivity
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

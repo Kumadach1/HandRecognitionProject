@@ -42,6 +42,7 @@
     <string name="CP_ans">display a pre-processing input image(from the selected picture)</string>
     <string name="predict_botton">PREDICT CLASS</string>
     <string name="none">-> NONE</string>
+    <string name="resultt">use image to predict class</string>
 
     //Predict Image Class - Result page
     <string name="select_picture">Select Picture</string>
@@ -51,6 +52,7 @@
     <string name="Class_name">Class :</string>
     <string name="Feature">FEATURE EXTRCTION RESULUTS</string>
     <string name="Class_prediction_re">CLASS PREDICTION RESULT</string>
+    <string name="Class_prediction">CLASS PREDICTION</string>
 
     //Predict Image Class - Feature Extraction Result page
     <string name="f_page">Feature Extraction</string>
@@ -74,5 +76,15 @@
     //Predict Image Class - infoNotComplete
     <string name="error">Error!</string>
     <string name="go_back">Go Back</string>
+
+    //rock-paper-scissors game
+    <string name="title_game">Rock Paper Scissors Game</string>
+    <string name="My_choice">Your choice</string>
+    <string name="class_predict_game">computer :</string>
+    <string name="play">Let\'s go!!</string>
+    <string name="com">Computer</string>
+    <string name="player">Player</string>
+    <string name="player_stk">Player\'s stack : 0</string>
+    <string name="computer_stk">Computer\'s stack : 0</string>
 
 </resources>

@@ -17,7 +17,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".featureExtractionActivity"></activity>
+        <activity android:name=".RockPaperScissorsActivity"></activity>
+        <activity android:name=".PredictionActivity" />
+        <activity android:name=".featureExtractionActivity" />
         <activity android:name=".DisplayFeatureActivity" />
         <activity
             android:name=".MainActivity"
